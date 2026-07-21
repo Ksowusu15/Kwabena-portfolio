@@ -1,0 +1,31 @@
+{
+  "name": "kwabena-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "lucide-react": "latest",
+    "motion": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^5.7.0",
+    "resend": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
