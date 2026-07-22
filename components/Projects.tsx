@@ -158,9 +158,9 @@ export function Projects() {
                 <span className="text-gradient">real-world problems.</span>
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-                Each project is presented as a concise product case study—showing
+                Each project is presented as a concise product case study, showing
                 the interface, engineering decisions, core features, and the
-                practical problem it solves.
+                practical problem they solve.
               </p>
             </div>
 
