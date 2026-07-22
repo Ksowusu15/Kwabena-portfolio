@@ -110,7 +110,7 @@ export function About() {
                 My background in IT support helps me approach software
                 development from both the user and technical
                 perspectives. I understand that good software must not
-                only look professional—it must also be dependable,
+                only look professional, it must also be dependable,
                 secure, maintainable, and easy to use.
               </p>
 
@@ -241,7 +241,7 @@ export function About() {
               </h3>
 
               <p className="mt-5 leading-7 text-slate-300">
-                I can contribute across the development process—from
+                I can contribute across the development process, from
                 understanding requirements and designing a database to
                 creating the user interface, testing functionality, and
                 preparing the application for deployment.
