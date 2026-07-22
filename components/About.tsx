@@ -209,11 +209,11 @@ export function About() {
                             {item.period}
                           </p>
 
-                          <h4 className="mt-2 text-xl font-black text-slate-950">
-                            {item.title}
-                          </h4>
+                            <h4 className="mt-2 text-xl font-black text-slate-950 dark:text-white">
+                              {item.title}
+                            </h4>
 
-                          <p className="mt-1 font-semibold text-slate-500 dark:text-slate-400">
+                          <p className="mt-1 font-semibold text-slate-600 dark:text-slate-300">
                             {item.organisation}
                           </p>
 
