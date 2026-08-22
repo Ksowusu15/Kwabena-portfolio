@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import {
   BriefcaseBusiness,
-  CheckCircle2,
   Code2,
   Laptop,
   Network,
@@ -256,23 +255,6 @@ export function Experience() {
                 })}
               </div>
 
-              <div className="mt-8 rounded-2xl border border-emerald-400/15 bg-emerald-400/[0.06] p-5">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="text-emerald-400"
-                  />
-
-                  <p className="font-bold text-emerald-300">
-                    Available for new opportunities
-                  </p>
-                </div>
-
-                <p className="mt-3 text-sm leading-6 text-slate-400">
-                  Open to software engineering, full-stack development,
-                  and IT-focused roles.
-                </p>
-              </div>
 
     <a
         href="#contact"

@@ -51,13 +51,11 @@ export function Footer() {
               </p>
 
               <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
-                Have a project, opportunity, or useful idea?
+                Have a project or useful idea?
               </h2>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                I am available for software engineering roles,
-                freelance development, technical collaborations, and
-                conversations about building reliable digital products.
+                I design and build reliable digital products, from thoughtful interfaces to backend systems, integrations, and deployment-ready applications.
               </p>
             </div>
 
@@ -202,23 +200,6 @@ export function Footer() {
                 <span>{profile.location}</span>
               </div>
 
-              <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/[0.06] p-4">
-                <div className="flex items-center gap-2">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                  </span>
-
-                  <p className="text-sm font-bold text-emerald-300">
-                    Open to opportunities
-                  </p>
-                </div>
-
-                <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Available for software engineering roles and selected
-                  freelance projects.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -227,10 +208,6 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold text-slate-300">
               © {currentYear} Kwabena Owusu Soadwa
-            </p>
-
-            <p className="mt-1 text-xs text-slate-500">
-              Built with Next.js, TypeScript, Tailwind CSS and Motion.
             </p>
           </div>
 

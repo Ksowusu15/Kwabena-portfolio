@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { profile } from "@/data/site";
 import { SITE_URL } from "@/lib/site-url";
+import { SectionNavigator } from "@/components/SectionNavigator";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <SectionNavigator />
         <Analytics />
       </body>
     </html>

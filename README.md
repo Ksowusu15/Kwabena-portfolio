@@ -16,6 +16,15 @@ A production-ready portfolio built with Next.js App Router, TypeScript, Tailwind
 - Vercel Analytics
 - Security response headers
 
+
+## Featured Projects
+
+- **CNK Establishment** — Full-stack business platform with a public product catalogue, quote and price-request workflows, role-based administration, analytics, resources, Prisma, PostgreSQL/Neon, media integration, and transactional email support.
+- **Soadwa Motors** — Full-stack dealership platform with inventory management, advanced filtering, image handling, enquiries, test-drive requests, and a secure admin dashboard.
+- **CropGuard AI** — AI-assisted crop disease decision-support application with image classification, prediction history, user accounts, feedback workflows, and administrator tools.
+- **E-Millenial Store** — Responsive e-commerce experience with cart management, validation, purchase summaries, and Paystack checkout integration.
+- **Student Management Portal** — Flask and MySQL application for student registration, search, record management, and dashboard reporting.
+
 ## Local setup
 
 1. Install Node.js 20.9 or newer.

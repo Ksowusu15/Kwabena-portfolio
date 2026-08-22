@@ -17,7 +17,7 @@ import { Reveal } from "@/components/Reveal";
 
 const statistics = [
   {
-    value: 4,
+    value: 6,
     suffix: "+",
     label: "Completed projects",
   },
@@ -122,7 +122,7 @@ export function About() {
 
                 <span className="inline-flex items-center gap-2 rounded-full border border-violet-100 bg-violet-50 px-4 py-2 text-sm font-bold text-violet-700 dark:border-violet-400/20 dark:bg-violet-500/10 dark:text-violet-300">
                   <Sparkles size={16} />
-                  Open to opportunities
+                  Full-stack product development
                 </span>
               </div>
             </div>
@@ -209,9 +209,9 @@ export function About() {
                             {item.period}
                           </p>
 
-                            <h4 className="mt-2 text-xl font-black text-slate-950 dark:text-white">
-                              {item.title}
-                            </h4>
+                          <h4 className="mt-2 text-xl font-black text-slate-950 dark:text-white">
+                            {item.title}
+                          </h4>
 
                           <p className="mt-1 font-semibold text-slate-600 dark:text-slate-300">
                             {item.organisation}
@@ -241,7 +241,7 @@ export function About() {
               </h3>
 
               <p className="mt-5 leading-7 text-slate-300">
-                I can contribute across the development process, from
+                I can contribute across the development process—from
                 understanding requirements and designing a database to
                 creating the user interface, testing functionality, and
                 preparing the application for deployment.

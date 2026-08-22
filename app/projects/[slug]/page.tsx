@@ -52,6 +52,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project) notFound();
 
+  const hasGithub =
+    project.github.trim() !== "" && !project.github.startsWith("#");
   const hasLiveDemo =
     project.live.trim() !== "" && !project.live.startsWith("#");
   const nextProject = projects[(projectIndex + 1) % projects.length];
@@ -104,19 +106,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="action-button-primary group"
-                >
-                  <FaGithub size={18} />
-                  View source
-                  <ArrowUpRight
-                    size={17}
-                    className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
-                </a>
+                {hasGithub && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-button-primary group"
+                  >
+                    <FaGithub size={18} />
+                    View source
+                    <ArrowUpRight
+                      size={17}
+                      className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
+                  </a>
+                )}
 
                 {hasLiveDemo && (
                   <a
@@ -196,7 +200,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
             <p className="max-w-lg text-sm leading-6 text-slate-500 dark:text-slate-400">
               The same product is presented across desktop, tablet, and phone
-              frames to show how the interface adapts—not just how it looks in
+              frames to show how the interface adapts, not just how it looks in
               one screenshot.
             </p>
           </div>
@@ -413,7 +417,7 @@ function BrowserPreview({
             <span className="h-3 w-3 rounded-full bg-emerald-400" />
           </div>
           <div className="mx-auto max-w-xs flex-1 truncate rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-center text-[11px] font-semibold text-slate-400 dark:border-white/10 dark:bg-white/[0.05]">
-            {slug}.kwabenasoadwa.dev
+            portfolio / projects / {slug}
           </div>
         </div>
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">

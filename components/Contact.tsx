@@ -2,7 +2,6 @@
 
 import {
   ArrowUpRight,
-  Clock3,
   Mail,
   MapPin,
   Phone,
@@ -39,10 +38,10 @@ const contactDetails = [
     icon: MapPin,
   },
   {
-    label: "Availability",
-    value: "Open to opportunities",
+    label: "Focus",
+    value: "Software & digital products",
     href: null,
-    icon: Clock3,
+    icon: Sparkles,
   },
 ];
 
@@ -73,9 +72,7 @@ export function Contact() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-              I am open to software engineering roles, freelance
-              projects, technical collaborations, and conversations
-              about building reliable digital products.
+              Have a project, product idea, or technical problem to solve? I&apos;m happy to discuss how thoughtful software can turn it into a reliable digital experience.
             </p>
           </div>
         </Reveal>
@@ -92,7 +89,7 @@ export function Contact() {
               </div>
 
               <h3 className="mt-5 text-3xl font-black leading-tight sm:text-4xl">
-                Have a role, project, or idea in mind?
+                Have a product, project, or idea in mind?
               </h3>
 
               <p className="mt-5 leading-7 text-slate-300">
