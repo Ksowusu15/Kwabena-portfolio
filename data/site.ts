@@ -241,7 +241,7 @@ export const projects = [
       "Create vehicle financing calculators",
     ],
     github: "https://github.com/Ksowusu15",
-    live: "https://github.com/Ksowusu15",
+    live: "https://cars.kwabenaowususoadwa.com",
   },
   {
     slug: "plant-disease-detection",
@@ -304,7 +304,7 @@ export const projects = [
       "Add expert-reviewed treatment guidance",
     ],
     github: "https://github.com/Ksowusu15",
-    live: "https://github.com/Ksowusu15",
+    live: "https://cars.kwabenaowususoadwa.com",
   },
   {
     slug: "e-millenial-store",
