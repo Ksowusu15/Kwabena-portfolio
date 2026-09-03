@@ -304,7 +304,7 @@ export const projects = [
       "Add expert-reviewed treatment guidance",
     ],
     github: "https://github.com/Ksowusu15",
-    live: "https://cars.kwabenaowususoadwa.com",
+    live: "https://github.com/Ksowusu15",
   },
   {
     slug: "e-millenial-store",
