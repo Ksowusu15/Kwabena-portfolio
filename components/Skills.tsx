@@ -77,29 +77,29 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-[#101828] py-16 text-white sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-y border-slate-200 bg-slate-50 py-16 text-slate-950 sm:py-20 lg:py-24 dark:border-white/10 dark:bg-[#101828] dark:text-white"
     >
-      <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute -right-32 bottom-20 h-96 w-96 rounded-full bg-violet-500/10 blur-[120px]" />
+      <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-500/[0.04] blur-[120px] dark:bg-blue-500/10" />
+      <div className="absolute -right-32 bottom-20 h-96 w-96 rounded-full bg-slate-300/20 blur-[120px] dark:bg-violet-500/10" />
 
       <div className="container-shell relative">
         <Reveal>
           <div className="grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end">
             <div>
-              <p className="eyebrow text-blue-300">
+              <p className="eyebrow !text-blue-600 dark:!text-blue-300">
                 Technical capabilities
               </p>
 
-              <h2 className="skills-section-title section-title mt-5 max-w-4xl">
+              <h2 className="skills-section-title section-title mt-5 max-w-4xl !text-slate-950 dark:!text-white">
                 Tools I use to move from
                 <br />
-                <span className="hero-gradient-text">
+                <span className="!text-slate-950 dark:!text-white">
                   idea to production.
                 </span>
               </h2>
             </div>
 
-            <p className="max-w-xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            <p className="max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 dark:text-slate-300">
               My stack now spans modern React and Next.js applications,
               Python backends, relational databases, secure admin systems,
               integrations, and deployment-ready delivery.
@@ -119,23 +119,23 @@ export function Skills() {
                 <motion.article
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.25 }}
-                  className="group h-full rounded-[2rem] border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl transition hover:border-blue-400/30 hover:bg-white/[0.075] sm:p-8"
+                  className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-lg sm:p-8 dark:border-white/10 dark:bg-white/[0.05] dark:shadow-none dark:hover:border-blue-400/30 dark:hover:bg-white/[0.075]"
                 >
                   <div className="flex items-start justify-between gap-5">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl border border-blue-400/15 bg-blue-500/10 text-blue-300">
+                    <div className="grid h-12 w-12 place-items-center rounded-xl border border-blue-200 bg-blue-50 text-blue-600 dark:border-blue-400/15 dark:bg-blue-500/10 dark:text-blue-300">
                       <CategoryIcon size={23} />
                     </div>
 
-                    <span className="text-xs font-black tracking-[0.18em] text-white/30">
+                    <span className="text-xs font-black tracking-[0.18em] text-slate-300 dark:text-white/30">
                       0{index + 1}
                     </span>
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-black">
+                  <h3 className="mt-6 text-2xl font-black text-slate-950 dark:text-white">
                     {skillGroup.category}
                   </h3>
 
-                  <p className="mt-3 leading-7 text-slate-400">
+                  <p className="mt-3 leading-7 text-slate-600 dark:text-slate-400">
                     {category.description}
                   </p>
 
@@ -143,7 +143,7 @@ export function Skills() {
                     {skillGroup.items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-white/10 bg-white/[0.06] px-3.5 py-2 text-sm font-semibold text-slate-200 transition hover:border-blue-400/30 hover:bg-blue-500/10 hover:text-blue-200"
+                        className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200 dark:hover:border-blue-400/30 dark:hover:bg-blue-500/10 dark:hover:text-blue-200"
                       >
                         {item}
                       </span>
@@ -156,20 +156,20 @@ export function Skills() {
         </div>
 
         <Reveal>
-          <div className="mt-10 rounded-[2.25rem] border border-white/10 bg-white/[0.04] p-6 sm:mt-12 sm:p-8">
+          <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <div className="flex items-center gap-2 text-blue-300">
+                <div className="flex items-center gap-2 text-blue-600 dark:text-blue-300">
                   <Workflow size={17} />
                   <p className="text-xs font-black uppercase tracking-[0.18em]">
                     Engineering strengths
                   </p>
                 </div>
-                <h3 className="mt-3 text-2xl font-black sm:text-3xl">
+                <h3 className="mt-3 text-2xl font-black text-slate-950 sm:text-3xl dark:text-white">
                   What I can contribute across a product build
                 </h3>
               </div>
-              <p className="max-w-md text-sm leading-6 text-slate-400">
+              <p className="max-w-md text-sm leading-6 text-slate-600 dark:text-slate-400">
                 I prefer showing capabilities through shipped systems rather than
                 arbitrary proficiency percentages.
               </p>
@@ -185,11 +185,11 @@ export function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
-                    className="rounded-2xl border border-white/10 bg-slate-950/25 p-5"
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50/40 dark:border-white/10 dark:bg-slate-950/25 dark:hover:border-blue-400/20 dark:hover:bg-slate-950/40"
                   >
-                    <Icon size={20} className="text-blue-300" />
-                    <h4 className="mt-4 font-black">{capability.title}</h4>
-                    <p className="mt-2 text-sm leading-6 text-slate-400">
+                    <Icon size={20} className="text-blue-600 dark:text-blue-300" />
+                    <h4 className="mt-4 font-black text-slate-950 dark:text-white">{capability.title}</h4>
+                    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       {capability.text}
                     </p>
                   </motion.article>

@@ -22,28 +22,21 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-slate-50 py-16 sm:py-20 lg:py-24 dark:bg-slate-950"
+      className="border-b border-slate-200 bg-slate-50 py-16 sm:py-20 lg:py-24 dark:border-white/10 dark:bg-slate-950"
     >
-      <div className="absolute left-0 top-24 h-80 w-80 rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute bottom-16 right-0 h-80 w-80 rounded-full bg-violet-500/10 blur-[120px]" />
-
-      <div className="container-shell relative">
+            <div className="container-shell">
         <Reveal>
           <div className="grid gap-7 lg:grid-cols-[1fr_0.72fr] lg:items-end">
             <div>
               <p className="eyebrow">Selected work</p>
               <h2 className="section-title mt-5 max-w-4xl">
-                Projects built to solve
-                <br />
-                <span className="text-gradient">real problems.</span>
+                Selected projects and case studies.
               </h2>
             </div>
 
             <div>
               <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 dark:text-slate-300">
-                A selection of full-stack applications, business platforms, and
-                product experiments. Open a case study for the engineering
-                decisions, architecture, challenges, and lessons behind each build.
+                A focused collection of software products and business systems. Each case study explains the problem, implementation, technical decisions, and results in a clear engineering format.
               </p>
 
               <a
@@ -60,27 +53,14 @@ export function Projects() {
           </div>
         </Reveal>
 
-        <div className="mt-9 flex flex-wrap gap-3 sm:mt-11">
-          {["6+ completed builds", "Full-stack systems", "AI integration", "Production workflows"].map(
-            (item) => (
-              <span
-                key={item}
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-slate-600 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300"
-              >
-                {item}
-              </span>
-            ),
-          )}
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-7 sm:mt-10">
+        <div className="mt-10 grid grid-cols-1 gap-7 sm:mt-10">
           {projects.map((project, index) => {
             const hasGithub = isValidExternalLink(project.github);
             const hasLiveDemo = isValidExternalLink(project.live);
 
             return (
               <Reveal key={project.slug} delay={(index % 2) * 0.06}>
-                <article className="group grid h-full overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_14px_45px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_22px_60px_rgba(15,23,42,0.11)] md:grid-cols-[1.05fr_0.95fr] dark:border-white/10 dark:bg-slate-900 dark:hover:border-blue-400/30">
+                <article className="group grid h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_18px_55px_rgba(15,23,42,0.10)] md:grid-cols-[1.05fr_0.95fr] dark:border-white/10 dark:bg-slate-900 dark:hover:border-white/20">
                   <Link
                     href={`/projects/${project.slug}`}
                     aria-label={`View ${project.title} case study`}
@@ -95,14 +75,6 @@ export function Projects() {
                       className="object-contain object-center transition duration-500 ease-out group-hover:scale-[1.02]"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent" />
-
-                    <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-slate-950/70 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-blue-200 backdrop-blur-md sm:left-5 sm:top-5">
-                      {project.category}
-                    </span>
-
-                    <span className="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-xl border border-white/15 bg-white text-slate-950 shadow-lg transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:bottom-5 sm:right-5">
-                      <ArrowUpRight size={18} />
-                    </span>
                   </Link>
 
                   <div className="flex flex-1 flex-col p-6 sm:p-7">
@@ -120,7 +92,7 @@ export function Projects() {
                       </span>
                     </div>
 
-                    <p className="mt-4 line-clamp-3 leading-7 text-slate-600 dark:text-slate-300">
+                    <p className="mt-4 max-w-xl text-[0.98rem] leading-7 text-slate-600 dark:text-slate-300">
                       {project.description}
                     </p>
 

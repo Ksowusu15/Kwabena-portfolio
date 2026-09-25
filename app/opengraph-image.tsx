@@ -10,7 +10,7 @@ export default function OpenGraphImage() {
       <div style={{ position: "absolute", width: 420, height: 420, borderRadius: 999, background: "rgba(37,99,235,.3)", filter: "blur(90px)", top: -120, right: -60 }} />
       <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div style={{ width: 72, height: 72, borderRadius: 20, background: "white", color: "#0f172a", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 28 }}>KS</div>
+          <div style={{ width: 72, height: 72, borderRadius: 20, background: "white", color: "#0f172a", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 28 }}>KOS</div>
           <div style={{ fontSize: 26, color: "#bfdbfe", letterSpacing: 3 }}>SOFTWARE ENGINEER</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

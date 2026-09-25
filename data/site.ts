@@ -4,7 +4,7 @@ export const profile = {
   role: "Software Engineer & Full-Stack Developer",
   location: "Accra, Ghana",
   email: "kwabena6037@gmail.com",
-  phone: "+233 55 425 0225",
+  phone: "+233 55 820 3555",
   github: "https://github.com/Ksowusu15",
   linkedin: "https://linkedin.com/in/kwabenaowusu2",
   summary:
@@ -34,25 +34,25 @@ export const projects = [
   {
     slug: "cnk-establishment",
     title: "CNK Establishment",
-    category: "Full-Stack Business Platform",
+    category: "Full Stack Business Platform",
     accent: "01",
     featured: true,
-    image: "/projects/cnk-establishment.webp",
+    image: "/projects/cnk-establishment-desktop.png",
     description:
-      "A production-focused corporate commerce and administration platform for a drilling-equipment supplier, combining a public product catalogue, quotation workflows, resources, analytics, and secure role-based content management.",
+      "A production focused corporate commerce and administration platform for a drilling-equipment supplier, combining a public product catalogue, quotation workflows, resources, analytics, and secure role based content management.",
     overview:
-      "CNK Establishment is a full-stack business platform built to support both customers and internal administrators. The public experience presents products, brands, company information, resources, quote requests, price enquiries, and contact channels, while the protected administration area manages products, categories, brands, messages, quotations, resources, website settings, analytics, and administrator accounts.",
+      "CNK Establishment is a full stack business platform built to support both customers and internal administrators. The public experience presents products, brands, company information, resources, quote requests, price enquiries, and contact channels, while the protected administration area manages products, categories, brands, messages, quotations, resources, website settings, analytics, and administrator accounts.",
     problem:
-      "A specialist equipment supplier needs more than a brochure website. Product information changes, procurement teams need structured quote and price-request workflows, customer enquiries must be tracked, and the client needs a secure way to manage content without depending on a developer for every update.",
+      "A specialist equipment supplier needs more than a brochure website. Product information changes, procurement teams need structured quote and price request workflows, customer enquiries must be tracked, and the client needs a secure way to manage content without depending on a developer for every update.",
     solution:
-      "I designed a single Next.js application with a responsive public website and a protected administration system. Prisma and PostgreSQL provide structured data management, role-based authorization separates Admin and Super Admin capabilities, and external integrations support media storage and transactional communication.",
+      "I designed a single Next.js application with a responsive public website and a protected administration system. Prisma and PostgreSQL provide structured data management, role based authorization separates Admin and Super Admin capabilities, and external integrations support media storage and transactional communication.",
     role: "Full-stack developer & system architect",
     status: "Client-ready production platform",
     architecture: [
       "Next.js 16 and React public/admin interfaces",
       "App Router and Route Handlers for server functionality",
       "Prisma ORM and PostgreSQL/Neon data layer",
-      "Secure session authentication with bcrypt and role-based access",
+      "Secure session authentication with bcrypt and role based access",
       "Cloudinary-ready media and Brevo transactional email integrations",
     ],
     outcomes: [
@@ -68,7 +68,7 @@ export const projects = [
     responsibilities: [
       "Information architecture and responsive public website design",
       "Database modelling with Prisma and PostgreSQL",
-      "Protected admin dashboard and role-based authorization",
+      "Protected admin dashboard and role based authorization",
       "Product, category, brand, resource, quote, and message workflows",
       "Analytics, validation, rate limiting, password reset, SEO, and deployment preparation",
     ],
@@ -86,10 +86,10 @@ export const projects = [
     ],
     highlights: [
       "Product catalogue with search, filtering, pagination, and detail pages",
-      "Role-based Admin and Super Admin dashboard",
-      "Quote, price-request, contact-message, and status-management workflows",
+      "Role based Admin and Super Admin dashboard",
+      "Quote, price request, contact-message, and status-management workflows",
       "Product, category, brand, resource, image, and website-settings management",
-      "Analytics, CSV exports, SEO, rate limiting, and password-reset support",
+      "Analytics, CSV exports, SEO, rate limiting, and password reset support",
     ],
     challenges: [
       "Designing safe permissions for client administrators and the system owner",
@@ -101,24 +101,96 @@ export const projects = [
       "Add richer procurement reporting and downloadable quote documents",
       "Introduce automated notification preferences for inquiry status changes",
       "Add deeper product analytics and conversion tracking",
-      "Expand automated integration and end-to-end testing",
+      "Expand automated integration and end to end testing",
     ],
     github: "https://github.com/Ksowusu15/CNK-Establishment",
     live: "https://cnk-establishment-website.vercel.app/",
   },
   {
+    slug: "rebajanow-sales-crm",
+    title: "RebajaNow Sales CRM",
+    category: "Sales & Field Operations CRM",
+    accent: "02",
+    featured: true,
+    image: "/projects/rebajanow-crm-desktop.png",
+    description:
+      "An internal sales CRM for RebajaNow Services Ltd that centralizes field visits, prospect interest, follow-ups, tasks, assignments, and merchant-acquisition progress across role based team workflows.",
+    overview:
+      "RebajaNow Sales CRM is an internal workspace built for a five-person field sales operation. It gives administrators, sales managers, and sales officers a shared system for recording hospitality prospects, tracking interest, scheduling follow-ups, assigning work, and monitoring acquisition activity from initial property visits through later client-acquisition stages.",
+    problem:
+      "Field sales information can quickly become fragmented across conversations, notes, and individual follow-up reminders. The team needed a central system that preserved prospect history, made upcoming and overdue follow-ups visible, separated responsibilities by role, and gave managers a clearer view of sales activity.",
+    solution:
+      "I designed and developed a role based CRM around the team's actual field workflow. Leads move through clear statuses, follow-ups carry dates and times, managers can assign tasks and field work, officers can update their prospects, and dashboards surface operational metrics without exposing administrative controls to the wrong roles.",
+    role: "Full-stack developer & CRM system designer",
+    status: "Internal sales operations platform",
+    architecture: [
+      "Next.js App Router and responsive React interface",
+      "TypeScript application and server side workflows",
+      "Prisma ORM with PostgreSQL hosted on Neon",
+      "Role based access for Admin, Sales Manager, and Sales Officer",
+      "Database-backed leads, follow-ups, tasks, users, and field assignments",
+    ],
+    outcomes: [
+      "Centralized prospect visits, notes, interest, and follow-up activity",
+      "Created role-specific workflows for administrators, managers, and officers",
+      "Made today's and overdue follow-ups visible for day to day sales execution",
+      "Established a foundation that can support the team's move from onboarding into client acquisition",
+    ],
+    lessons: [
+      "CRM design works best when it mirrors the team's real operating process",
+      "Role permissions should reduce noise as well as protect sensitive actions",
+      "Lead status rules directly affect the usefulness of follow-up reporting",
+    ],
+    responsibilities: [
+      "CRM workflow planning and responsive interface design",
+      "Lead, follow-up, task, user, and field-assignment data modelling",
+      "Admin, Sales Manager, and Sales Officer authorization rules",
+      "Dashboard metrics, lead-status logic, and follow-up filtering",
+      "Prisma/Neon integration and deployment-oriented database workflows",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Prisma",
+      "PostgreSQL",
+      "Neon",
+    ],
+    highlights: [
+      "Role based Admin, Sales Manager, and Sales Officer workspaces",
+      "Lead tracking with New, Interested, Ready, and Not Interested statuses",
+      "Scheduled follow-ups with today and overdue visibility",
+      "Manager task assignment and field-assignment workflows",
+      "Officer filtering, account management, notes, and sales activity reporting",
+    ],
+    challenges: [
+      "Keeping permissions distinct while maintaining a simple workflow for a small team",
+      "Preventing Ready and Not Interested leads from cluttering active follow-up queues",
+      "Designing responsive management screens for both field phones and office laptops",
+      "Maintaining reliable Prisma and Neon database connectivity across development and deployment",
+    ],
+    improvements: [
+      "Add richer client-acquisition and conversion reporting",
+      "Introduce reminders and automated follow-up notifications",
+      "Add management exports and deeper officer-performance analytics",
+      "Expand activity history and audit trails as the sales operation grows",
+    ],
+    github: "",
+    live: "",
+  },
+  {
     slug: "rennovex-technology",
     title: "Rennovex Technology",
     category: "Production Business Platform",
-    accent: "02",
+    accent: "03",
     featured: true,
-    image: "/projects/rennovex-technology.webp",
+    image: "/projects/rennovex-desktop.png",
     description:
-      "A production-focused technology company website and administration platform built with Next.js, TypeScript, Prisma, and PostgreSQL, combining service marketing, case studies, content management, enquiries, bookings, analytics, and secure role-based operations.",
+      "A production focused technology company website and administration platform built with Next.js, TypeScript, Prisma, and PostgreSQL, combining service marketing, case studies, content management, enquiries, bookings, analytics, and secure role based operations.",
     overview:
-      "Rennovex Technology is a full-stack company platform designed for a Ghanaian technology business serving startups, SMEs, entrepreneurs, and nonprofit organisations. The public experience communicates software development, graphic design and branding, and IT support and consulting services, while the protected administration area supports day-to-day content and operational management.",
+      "Rennovex Technology is a full stack company platform designed for a Ghanaian technology business serving startups, SMEs, entrepreneurs, and nonprofit organisations. The public experience communicates software development, graphic design and branding, and IT support and consulting services, while the protected administration area supports day to day content and operational management.",
     problem:
-      "A growing technology company needs more than a static marketing website. Its digital presence must establish credibility, explain services clearly, capture enquiries, publish proof of work, and give administrators a secure way to manage content and customer-facing information as the business grows.",
+      "A growing technology company needs more than a static marketing website. Its digital presence must establish credibility, explain services clearly, capture enquiries, publish proof of work, and give administrators a secure way to manage content and customer facing information as the business grows.",
     solution:
       "I built a responsive Next.js application with a polished public website and protected administration workflows. The system combines server-rendered pages, Prisma-backed PostgreSQL data, secure authentication, role-aware administration, content management, contact and booking workflows, and production-oriented deployment architecture.",
     role: "Full-stack developer & system designer",
@@ -142,7 +214,7 @@ export const projects = [
     ],
     responsibilities: [
       "Product architecture, UI/UX, and responsive frontend development",
-      "Prisma schema, PostgreSQL integration, and server-side workflows",
+      "Prisma schema, PostgreSQL integration, and server side workflows",
       "Protected admin dashboard, authentication, and session management",
       "Services, case studies, blog, enquiries, bookings, and site-settings management",
       "SEO, validation, deployment preparation, and production hardening",
@@ -161,7 +233,7 @@ export const projects = [
     highlights: [
       "Responsive multi-page technology company website",
       "Protected administration dashboard with content-management workflows",
-      "Service, case-study, blog, enquiry, and booking management",
+      "Service, case study, blog, enquiry, and booking management",
       "PostgreSQL/Prisma data layer with secure authentication",
       "Production SEO, validation, analytics-oriented tooling, and deployment architecture",
     ],
@@ -174,8 +246,8 @@ export const projects = [
     improvements: [
       "Add deeper lead and conversion analytics",
       "Expand automated client communication and follow-up workflows",
-      "Add richer case-study performance metrics",
-      "Introduce broader automated end-to-end test coverage",
+      "Add richer case study performance metrics",
+      "Introduce broader automated end to end test coverage",
     ],
     github: "https://github.com/Ksowusu15/Rennovex-technology",
     live: "https://rennovextech.kwabenaowususoadwa.com",
@@ -183,16 +255,16 @@ export const projects = [
   {
     slug: "soadwa-motors",
     title: "Soadwa Motors",
-    category: "Full-Stack Web Application",
-    accent: "03",
+    category: "Full Stack Web Application",
+    accent: "04",
     featured: true,
     image: "/projects/car-dealership.webp",
     description:
-      "A database-driven dealership platform with responsive inventory browsing, advanced vehicle management, customer enquiries, test-drive requests, media uploads, and a secure administration dashboard.",
+      "A database driven dealership platform with responsive inventory browsing, advanced vehicle management, customer enquiries, test drive requests, media uploads, and a secure administration dashboard.",
     overview:
-      "Soadwa Motors was designed as a complete digital platform for a modern vehicle dealership. It combines a public-facing inventory website with a secure administration system for managing vehicles, customer messages, company information, team members, and test-drive requests.",
+      "Soadwa Motors was designed as a complete digital platform for a modern vehicle dealership. It combines a public facing inventory website with a secure administration system for managing vehicles, customer messages, company information, team members, and test drive requests.",
     problem:
-      "Traditional dealership workflows often depend on social-media posts, calls, and manually maintained vehicle records. Customers cannot easily search available vehicles, while administrators lack a single system for updating inventory and managing enquiries.",
+      "Traditional dealership workflows often depend on social media posts, calls, and manually maintained vehicle records. Customers cannot easily search available vehicles, while administrators lack a single system for updating inventory and managing enquiries.",
     solution:
       "I built a centralized dealership application that allows customers to browse and filter vehicles while giving administrators complete control over listings, media, enquiries, settings, and customer requests.",
     role: "Full-stack developer & product designer",
@@ -202,10 +274,10 @@ export const projects = [
       "Flask application and authentication layer",
       "SQLAlchemy data-access layer",
       "MySQL relational database",
-      "Secure local/cloud-ready media storage",
+      "Secure local/cloud ready media storage",
     ],
     outcomes: [
-      "Centralized vehicle, enquiry, and test-drive management",
+      "Centralized vehicle, enquiry, and test drive management",
       "Reduced repetitive content updates through an admin CMS",
       "Created one responsive experience for customers and staff",
     ],
@@ -225,8 +297,8 @@ export const projects = [
       "Vehicle CRUD and image management",
       "Secure administrator authentication",
       "Responsive inventory filtering and comparison",
-      "Customer enquiry and test-drive workflows",
-      "Database-driven company settings and team management",
+      "Customer enquiry and test drive workflows",
+      "Database driven company settings and team management",
     ],
     challenges: [
       "Managing multiple vehicle images securely",
@@ -247,34 +319,34 @@ export const projects = [
     slug: "plant-disease-detection",
     title: "CropGuard AI",
     category: "AI-Assisted Web Application",
-    accent: "04",
+    accent: "05",
     featured: true,
     image: "/projects/plant-disease.webp",
     description:
-      "A crop disease decision-support application combining image classification, prediction history, user accounts, feedback workflows, an AI assistant, and administrator tools in a responsive Flask interface.",
+      "A crop disease decision support application combining image classification, prediction history, user accounts, feedback workflows, an AI assistant, and administrator tools in a responsive Flask interface.",
     overview:
-      "CropGuard AI connects a trained image-classification workflow to a practical web application. Users can upload or capture crop images, receive model predictions and guidance, review detection history, and interact with supporting tools while administrators manage feedback and application data.",
+      "CropGuard AI connects a trained image classification workflow to a practical web application. Users can upload or capture crop images, receive model predictions and guidance, review detection history, and interact with supporting tools while administrators manage feedback and application data.",
     problem:
-      "Crop symptoms can be difficult to identify consistently from visual inspection alone, while a raw machine-learning notebook does not provide the workflow, history, guidance, or usability needed by non-technical users.",
+      "Crop symptoms can be difficult to identify consistently from visual inspection alone, while a raw machine learning notebook does not provide the workflow, history, guidance, or usability needed by nontechnical users.",
     solution:
-      "I connected the model workflow to a responsive Flask application with authentication, upload/camera support, prediction history, decision-support messaging, feedback collection, administration tools, and database-backed user workflows.",
+      "I connected the model workflow to a responsive Flask application with authentication, upload/camera support, prediction history, decision support messaging, feedback collection, administration tools, and database-backed user workflows.",
     role: "Full-stack & ML integration developer",
     status: "Applied AI portfolio project",
     architecture: [
       "Responsive Flask/Jinja user interface",
       "Python application and prediction pipeline",
-      "TensorFlow/Keras image-classification model",
+      "TensorFlow/Keras image classification model",
       "Relational database for users, history, and feedback",
       "Email/reset and deployment-ready service integrations",
     ],
     outcomes: [
-      "Moved an image-classification model into a usable end-to-end application",
+      "Moved an image classification model into a usable end to end application",
       "Added history, feedback, admin, and guidance around model predictions",
       "Designed responsive upload and camera workflows for desktop and mobile",
     ],
     lessons: [
       "Model accuracy and product usability must be evaluated separately",
-      "AI predictions need clear uncertainty and decision-support language",
+      "AI predictions need clear uncertainty and decision support language",
       "Real-world testing data is essential before presenting a classifier as reliable",
     ],
     responsibilities: [
@@ -298,8 +370,8 @@ export const projects = [
       "Balancing prediction confidence with responsible user messaging",
     ],
     improvements: [
-      "Retrain with a larger and more diverse field-image dataset",
-      "Add calibrated confidence and out-of-distribution detection",
+      "Retrain with a larger and more diverse field image dataset",
+      "Add calibrated confidence and out of distribution detection",
       "Expand crop and disease coverage",
       "Add expert-reviewed treatment guidance",
     ],
@@ -309,12 +381,12 @@ export const projects = [
   {
     slug: "e-millenial-store",
     title: "E-Millenial Store",
-    category: "E-Commerce Frontend",
-    accent: "05",
+    category: "Ecommerce Frontend",
+    accent: "06",
     featured: false,
     image: "/projects/ecommerce-store.webp",
     description:
-      "A responsive e-commerce experience with product browsing, cart management, customer validation, purchase summaries, and Paystack checkout integration.",
+      "A responsive ecommerce experience with product browsing, cart management, customer validation, purchase summaries, and Paystack checkout integration.",
     overview:
       "E-Millenial Store is a responsive shopping interface that demonstrates the complete customer journey from product selection to payment confirmation.",
     problem:
@@ -327,7 +399,7 @@ export const projects = [
       "Responsive semantic HTML interface",
       "CSS responsive layout and components",
       "Vanilla JavaScript application state",
-      "Client-side cart and checkout workflow",
+      "Client side cart and checkout workflow",
       "Paystack payment integration",
     ],
     outcomes: [
@@ -336,7 +408,7 @@ export const projects = [
       "Integrated a real payment workflow into a vanilla JavaScript project",
     ],
     lessons: [
-      "State management becomes important even in framework-free applications",
+      "State management becomes important even in framework free applications",
       "Checkout UX needs clear validation and confirmation states",
       "Responsive product layouts should be tested at real device widths",
     ],
@@ -352,7 +424,7 @@ export const projects = [
       "Paystack payment workflow",
       "Customer form validation",
       "Purchase-summary interface",
-      "Responsive mobile-first layout",
+      "Responsive mobile first layout",
     ],
     challenges: [
       "Maintaining cart state without a framework",
@@ -372,8 +444,8 @@ export const projects = [
   {
     slug: "student-management-portal",
     title: "Student Management Portal",
-    category: "Full-Stack Management System",
-    accent: "06",
+    category: "Full Stack Management System",
+    accent: "07",
     featured: false,
     image: "/projects/student-portal.webp",
     description:
@@ -424,7 +496,7 @@ export const projects = [
       "Presenting administrative data clearly",
     ],
     improvements: [
-      "Add role-based authentication",
+      "Add role based authentication",
       "Add CSV and PDF exports",
       "Add attendance management",
       "Add academic-performance reporting",
@@ -438,16 +510,16 @@ export const experience = [
   {
     role: "IT Officer",
     company: "National Entrepreneurship and Innovation Programme",
-    period: "Oct 2024 – Aug 2025",
+    period: "Oct 2024   Aug 2025",
     details:
-      "Delivered day-to-day technical support across hardware, software, networks, system installations, IT assets, databases, and internal software testing while helping teams keep business operations running reliably.",
+      "Delivered day to day technical support across hardware, software, networks, system installations, IT assets, databases, and internal software testing while helping teams keep business operations running reliably.",
   },
   {
-    role: "Independent Full-Stack Developer",
+    role: "Independent Full Stack Developer",
     company: "Client & Portfolio Projects",
     period: "Ongoing",
     details:
-      "Designing and developing end-to-end web applications across Next.js, React, Flask, SQL databases, authentication, payments, role-based admin systems, API integrations, and cloud-ready deployment workflows.",
+      "Designing and developing end to end web applications across Next.js, React, Flask, SQL databases, authentication, payments, role based admin systems, API integrations, and cloud ready deployment workflows.",
   },
 ];
 

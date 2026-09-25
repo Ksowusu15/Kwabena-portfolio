@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Download, Menu, Moon, Sun, X } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { motion } from "motion/react";
 
 import { profile } from "@/data/site";
 
@@ -120,7 +122,7 @@ export function Navbar() {
     <>
       <div className="fixed left-0 top-0 z-[100] h-1 w-full bg-transparent">
         <div
-          className="h-full bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 transition-[width] duration-150"
+          className="h-full bg-blue-600 transition-[width] duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -130,11 +132,14 @@ export function Navbar() {
           isNavbarVisible || isMenuOpen ? "translate-y-0" : "-translate-y-[calc(100%+1.5rem)]"
         }`}
       >
-        <nav
-          className={`mx-auto flex max-w-7xl items-center justify-between rounded-2xl border px-4 py-3 transition-all duration-300 sm:px-5 ${
+        <motion.nav
+          initial={{ opacity: 0, y: -14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className={`mx-auto flex max-w-7xl items-center justify-between rounded-xl border px-4 py-3 transition-all duration-300 sm:px-5 ${
             isScrolled
-              ? "border-white/60 bg-white/85 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/85"
-              : "border-transparent bg-white/50 backdrop-blur-xl dark:bg-slate-950/45"
+              ? "border-slate-200 bg-white/95 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-slate-950/95"
+              : "border-transparent bg-white/95 dark:bg-slate-950/95"
           }`}
         >
           <Link
@@ -142,9 +147,7 @@ export function Navbar() {
             aria-label="Go to homepage"
             className="group flex items-center gap-3"
           >
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-slate-950 text-sm font-black tracking-[-0.04em] text-white shadow-lg transition duration-300 group-hover:-rotate-3 group-hover:scale-105 dark:bg-white dark:text-slate-950">
-              {profile.shortName}
-            </span>
+            <span className="interactive-icon-link relative h-11 w-11 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm dark:border-white/15"><Image src="/images/ks-logo.png" alt="" fill sizes="44px" className="object-contain p-1" /></span>
 
             <span className="hidden sm:block">
               <span className="block text-sm font-black text-slate-950 dark:text-white">
@@ -160,22 +163,30 @@ export function Navbar() {
             {navigationLinks.map((link) => {
               const isActive = activeSection === link.sectionId;
               return (
-                <Link
+                <motion.div
                   key={link.sectionId}
-                  href={link.href}
-                  className={`relative rounded-xl px-4 py-2 text-sm font-bold transition ${
-                    isActive
-                      ? "text-blue-600 dark:text-blue-400"
-                      : "text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
-                  }`}
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, delay: 0.08 + navigationLinks.findIndex((item) => item.sectionId === link.sectionId) * 0.045 }}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.97 }}
                 >
-                  {link.label}
-                  <span
-                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-blue-600 transition-all duration-300 ${
-                      isActive ? "w-5" : "w-0"
+                  <Link
+                    href={link.href}
+                    className={`group/nav relative block rounded-lg px-4 py-2 text-sm font-bold transition-colors duration-300 ${
+                      isActive
+                        ? "text-blue-600 dark:text-blue-400"
+                        : "text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
                     }`}
-                  />
-                </Link>
+                  >
+                    <span className="relative z-10">{link.label}</span>
+                    <span
+                      className={`absolute inset-x-2 bottom-0 h-0.5 origin-center rounded-full bg-blue-600 transition-transform duration-300 ease-out ${
+                        isActive ? "scale-x-100" : "scale-x-0 group-hover/nav:scale-x-75"
+                      }`}
+                    />
+                  </Link>
+                </motion.div>
               );
             })}
           </div>
@@ -186,7 +197,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open GitHub profile"
-              className="hidden h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 sm:grid dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+              className="interactive-icon-link hidden h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 sm:grid dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
             >
               <FaGithub size={18} />
             </a>
@@ -196,7 +207,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open LinkedIn profile"
-              className="hidden h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 sm:grid dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+              className="interactive-icon-link hidden h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 sm:grid dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
             >
               <FaLinkedinIn size={17} />
             </a>
@@ -241,7 +252,7 @@ export function Navbar() {
               <Menu size={20} />
             </button>
           </div>
-        </nav>
+        </motion.nav>
       </header>
 
       <div
@@ -269,9 +280,7 @@ export function Navbar() {
               onClick={closeMenu}
               className="flex items-center gap-3"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-slate-950 text-sm font-black text-white dark:bg-white dark:text-slate-950">
-                {profile.shortName}
-              </span>
+              <span className="interactive-icon-link relative h-11 w-11 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm dark:border-white/15"><Image src="/images/ks-logo.png" alt="" fill sizes="44px" className="object-contain p-1" /></span>
               <div>
                 <p className="text-sm font-black text-slate-950 dark:text-white">
                   Kwabena Soadwa
@@ -296,18 +305,26 @@ export function Navbar() {
             {navigationLinks.map((link) => {
               const isActive = activeSection === link.sectionId;
               return (
-                <Link
+                <motion.div
                   key={link.sectionId}
-                  href={link.href}
-                  onClick={closeMenu}
-                  className={`rounded-2xl px-5 py-4 text-base font-bold transition ${
-                    isActive
-                      ? "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400"
-                      : "text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
-                  }`}
+                  initial={{ opacity: 0, x: 18 }}
+                  animate={isMenuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 18 }}
+                  transition={{ duration: 0.28, delay: isMenuOpen ? navigationLinks.findIndex((item) => item.sectionId === link.sectionId) * 0.045 : 0 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  {link.label}
-                </Link>
+                  <Link
+                    href={link.href}
+                    onClick={closeMenu}
+                    className={`group/mobile relative block overflow-hidden rounded-xl px-5 py-4 text-base font-bold transition-colors ${
+                      isActive
+                        ? "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400"
+                        : "text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
+                    }`}
+                  >
+                    <span className="relative z-10">{link.label}</span>
+                    <span className="absolute bottom-0 left-5 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover/mobile:w-8" />
+                  </Link>
+                </motion.div>
               );
             })}
           </div>
@@ -328,7 +345,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open GitHub profile"
-                className="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-600 dark:border-white/10 dark:text-slate-300"
+                className="interactive-icon-link grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-600 dark:border-white/10 dark:text-slate-300"
               >
                 <FaGithub size={19} />
               </a>
@@ -337,7 +354,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open LinkedIn profile"
-                className="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-600 dark:border-white/10 dark:text-slate-300"
+                className="interactive-icon-link grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-600 dark:border-white/10 dark:text-slate-300"
               >
                 <FaLinkedinIn size={18} />
               </a>

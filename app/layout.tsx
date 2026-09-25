@@ -4,6 +4,7 @@ import { profile } from "@/data/site";
 import { SITE_URL } from "@/lib/site-url";
 import { SectionNavigator } from "@/components/SectionNavigator";
 import "./globals.css";
+import { InitialLoader } from "@/components/InitialLoader";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
+        <InitialLoader />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("portfolio-theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);}catch(e){}})();`,

@@ -62,9 +62,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main>
       <Navbar />
 
-      <section className="relative overflow-hidden pb-16 pt-28 sm:pb-20 sm:pt-32">
-        <div className="absolute left-0 top-20 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-        <div className="absolute right-0 top-1/3 -z-10 h-96 w-96 rounded-full bg-violet-500/10 blur-[120px]" />
+      <section className="relative overflow-hidden border-b border-slate-200 bg-white pb-16 pt-28 sm:pb-20 sm:pt-32 dark:border-white/10 dark:bg-slate-950">
 
         <div className="container-shell">
           <Link
@@ -88,7 +86,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.title}
               </h1>
 
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-7 max-w-2xl text-[1.05rem] leading-8 text-slate-600 dark:text-slate-300">
                 {project.description}
               </p>
 
@@ -162,14 +160,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           />
         </div>
 
-        <article className="mt-8 overflow-hidden rounded-[2.25rem] bg-[#101828] p-7 text-white shadow-2xl sm:p-10 lg:p-12">
+        <article className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 p-7 text-white shadow-lg sm:p-10 lg:p-12 dark:border-white/10">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-300">
                 Project overview
               </p>
               <h2 className="mt-4 text-3xl font-black tracking-[-0.035em] sm:text-4xl">
-                From practical need to complete product.
+                A concise view of the product and its purpose.
               </h2>
             </div>
             <div>
@@ -190,7 +188,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </article>
 
-        <section className="mt-8 rounded-[2.25rem] border border-slate-200 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-9 dark:border-white/10 dark:bg-slate-900">
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-9 dark:border-white/10 dark:bg-slate-900">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="eyebrow">Responsive product view</p>
@@ -199,9 +197,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </h2>
             </div>
             <p className="max-w-lg text-sm leading-6 text-slate-500 dark:text-slate-400">
-              The same product is presented across desktop, tablet, and phone
-              frames to show how the interface adapts, not just how it looks in
-              one screenshot.
+              A responsive view of the interface across desktop, tablet, and mobile screens.
             </p>
           </div>
 
@@ -217,7 +213,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               device="tablet"
             />
             <DevicePreview
-              image={project.image}
+              image={project.slug === "rebajanow-sales-crm" ? "/projects/rebajanow-crm-mobile.png" : project.slug === "rennovex-technology" ? "/projects/rennovex-mobile.png" : project.slug === "cnk-establishment" ? "/projects/cnk-establishment-mobile.png" : project.image}
               title={project.title}
               device="phone"
             />
@@ -225,7 +221,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
 
         <section className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <article className="glass rounded-[2rem] p-7 sm:p-9">
+          <article className="glass rounded-2xl p-7 sm:p-9">
             <div className="flex items-center gap-3 text-blue-600 dark:text-blue-400">
               <Layers3 size={22} />
               <h2 className="text-2xl font-black text-slate-950 dark:text-white">
@@ -291,7 +287,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           />
         </div>
 
-        <article className="mt-8 grid gap-8 rounded-[2.25rem] border border-blue-100 bg-gradient-to-br from-blue-50 to-violet-50 p-7 sm:p-10 lg:grid-cols-[0.75fr_1.25fr] dark:border-blue-400/15 dark:from-blue-500/[0.08] dark:to-violet-500/[0.08]">
+        <article className="mt-8 grid gap-8 rounded-2xl border border-slate-200 bg-slate-50 p-7 sm:p-10 lg:grid-cols-[0.75fr_1.25fr] dark:border-white/10 dark:bg-slate-900">
           <div>
             <div className="grid h-13 w-13 place-items-center rounded-2xl bg-white text-blue-600 shadow-sm dark:bg-white/[0.08] dark:text-blue-300">
               <BookOpen size={24} />
@@ -300,7 +296,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               Lessons learned
             </p>
             <h2 className="mt-3 text-3xl font-black tracking-[-0.035em] text-slate-950 dark:text-white">
-              What this project improved in my engineering process.
+              Engineering lessons carried into future work.
             </h2>
           </div>
           <ul className="grid gap-4 sm:grid-cols-3">
@@ -320,7 +316,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <Link
           href={`/projects/${nextProject.slug}`}
-          className="next-case-study-card group mt-8 flex flex-col gap-6 overflow-hidden rounded-[2.25rem] bg-slate-950 p-7 shadow-2xl transition hover:-translate-y-1 sm:flex-row sm:items-center sm:justify-between sm:p-10"
+          className="next-case-study-card group mt-8 flex flex-col gap-6 overflow-hidden rounded-2xl bg-slate-950 p-7 shadow-2xl transition hover:-translate-y-1 sm:flex-row sm:items-center sm:justify-between sm:p-10"
         >
           <div>
             <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-300">
@@ -380,7 +376,7 @@ function NarrativeCard({ icon, eyebrow, text, tone }: NarrativeCardProps) {
       : "text-violet-600 dark:text-violet-400";
 
   return (
-    <article className="glass rounded-[2rem] p-7 transition hover:-translate-y-1 sm:p-9">
+    <article className="glass rounded-2xl p-7 transition hover:-translate-y-1 sm:p-9">
       <div className={`flex items-center gap-3 ${toneClass}`}>
         {icon}
         <p className="text-xs font-black uppercase tracking-[0.18em]">
@@ -408,7 +404,7 @@ function BrowserPreview({
   priority = false,
 }: BrowserPreviewProps) {
   return (
-    <div className="case-study-browser overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 p-3 shadow-[0_30px_90px_rgba(15,23,42,0.18)] dark:border-white/10 dark:bg-slate-950">
+    <div className="case-study-browser overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 p-3 shadow-[0_30px_90px_rgba(15,23,42,0.18)] dark:border-white/10 dark:bg-slate-950">
       <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white dark:border-white/10 dark:bg-slate-900">
         <div className="flex h-12 items-center gap-3 border-b border-slate-200 bg-slate-50 px-4 dark:border-white/10 dark:bg-slate-900">
           <div className="flex gap-2">
@@ -446,7 +442,7 @@ function DevicePreview({ image, title, device }: DevicePreviewProps) {
   const frame = {
     desktop: "aspect-[16/10] rounded-[1.4rem] p-2",
     tablet: "mx-auto aspect-[4/5] max-w-[330px] rounded-[1.8rem] p-2.5",
-    phone: "mx-auto aspect-[9/18] max-w-[190px] rounded-[2rem] p-2.5",
+    phone: "mx-auto aspect-[9/18] max-w-[190px] rounded-2xl p-2.5",
   }[device];
 
   return (
@@ -479,7 +475,7 @@ type DetailListProps = {
 
 function DetailList({ title, items, icon }: DetailListProps) {
   return (
-    <article className="glass h-full rounded-[2rem] p-7 transition hover:-translate-y-1">
+    <article className="glass h-full rounded-2xl p-7 transition hover:-translate-y-1">
       <div className="flex items-center gap-3 text-blue-600 dark:text-blue-400">
         {icon}
         <h2 className="text-xl font-black text-slate-950 dark:text-white">

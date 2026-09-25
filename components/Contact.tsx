@@ -53,9 +53,6 @@ export function Contact() {
       id="contact"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
     >
-      <div className="absolute left-0 top-20 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-
-      <div className="absolute bottom-0 right-0 -z-10 h-96 w-96 rounded-full bg-violet-500/10 blur-[120px]" />
 
       <div className="container-shell">
         <Reveal>
@@ -63,12 +60,7 @@ export function Contact() {
             <p className="eyebrow">Get in touch</p>
 
             <h2 className="section-title mt-5">
-              Let&apos;s build something
-              <br />
-
-              <span className="text-gradient">
-                useful together.
-              </span>
+              Have something worth building?
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
@@ -79,7 +71,7 @@ export function Contact() {
 
         <div className="mt-10 grid gap-6 sm:mt-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
           <Reveal>
-            <div className="h-full rounded-[2.5rem] bg-[#101828] p-7 text-white shadow-2xl sm:p-10">
+            <div className="h-full rounded-2xl bg-[#101828] p-7 text-white shadow-2xl sm:p-10">
               <div className="flex items-center gap-3 text-blue-300">
                 <Sparkles size={18} />
 
@@ -145,7 +137,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open GitHub"
-                    className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+                    className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
                   >
                     <FaGithub size={20} />
                   </a>
@@ -155,7 +147,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open LinkedIn"
-                    className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+                    className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
                   >
                     <FaLinkedinIn size={19} />
                   </a>
@@ -165,7 +157,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open WhatsApp"
-                    className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-emerald-400/30 hover:text-emerald-300"
+                    className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05] text-slate-200 transition hover:-translate-y-1 hover:border-emerald-400/30 hover:text-emerald-300"
                   >
                     <FaWhatsapp size={21} />
                   </a>
@@ -175,7 +167,7 @@ export function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-[0_30px_90px_rgba(15,23,42,0.1)] sm:p-9 dark:border-white/10 dark:bg-slate-900">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_30px_90px_rgba(15,23,42,0.1)] sm:p-9 dark:border-white/10 dark:bg-slate-900">
               <div className="mb-8 flex items-start justify-between gap-5">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
@@ -203,7 +195,7 @@ export function Contact() {
         </div>
 
         <Reveal>
-          <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-[2rem] border border-slate-200 bg-white/70 p-6 text-center backdrop-blur-xl sm:flex-row sm:text-left dark:border-white/10 dark:bg-white/[0.04]">
+          <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl border border-slate-200 bg-white/70 p-6 text-center backdrop-blur-xl sm:flex-row sm:text-left dark:border-white/10 dark:bg-white/[0.04]">
             <div>
               <p className="font-black text-slate-950 dark:text-white">
                 Prefer email?

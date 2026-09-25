@@ -46,9 +46,6 @@ export function Experience() {
       id="experience"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
     >
-      <div className="absolute left-0 top-24 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-
-      <div className="absolute bottom-0 right-0 -z-10 h-80 w-80 rounded-full bg-violet-500/10 blur-[120px]" />
 
       <div className="container-shell">
         <Reveal>
@@ -57,12 +54,7 @@ export function Experience() {
               <p className="eyebrow">Professional experience</p>
 
               <h2 className="section-title mt-5">
-                Where technical support
-                <br />
-
-                <span className="text-gradient">
-                  meets software delivery.
-                </span>
+                Experience across IT operations and software development.
               </h2>
             </div>
 
@@ -101,7 +93,7 @@ export function Experience() {
                         <ExperienceIcon size={23} />
                       </div>
 
-                      <div className="glass rounded-[2.25rem] p-7 sm:p-8">
+                      <div className="rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900 p-7 sm:p-8">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                           <div>
                             <p className="text-xs font-black uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
@@ -192,7 +184,7 @@ export function Experience() {
           </div>
 
           <Reveal delay={0.1}>
-            <aside className="h-fit rounded-[2.5rem] bg-[#101828] p-7 text-white shadow-2xl sm:p-9 lg:sticky lg:top-32">
+            <aside className="h-fit rounded-2xl bg-[#101828] p-7 text-white shadow-2xl sm:p-9 lg:sticky lg:top-32">
               <div className="flex items-center gap-3 text-blue-300">
                 <Sparkles size={18} />
 

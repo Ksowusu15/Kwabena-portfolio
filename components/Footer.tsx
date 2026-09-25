@@ -14,6 +14,8 @@ import {
 } from "react-icons/fa";
 
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "motion/react";
 import { profile } from "@/data/site";
 
 const quickLinks = [
@@ -38,12 +40,22 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-[#080d1a] text-white">
-      <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-blue-500/10 blur-[120px]" />
-
-      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-500/10 blur-[120px]" />
+      <motion.div
+        aria-hidden="true"
+        className="absolute left-0 top-0 h-px w-1/3 bg-gradient-to-r from-blue-500/70 to-transparent"
+        animate={{ x: ["-20%", "260%"] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      />
+      <div aria-hidden="true" className="absolute right-0 top-0 h-full w-px bg-white/5" />
 
       <div className="container-shell relative py-12 sm:py-16">
-        <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl sm:p-10">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          className="rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:p-10"
+        >
           <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.22em] text-blue-300">
@@ -82,17 +94,22 @@ export function Footer() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.2fr_0.7fr_0.8fr]">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.45 }}
+          >
             <Link
               href="/#home"
               className="inline-flex items-center gap-4"
               aria-label="Return to homepage"
             >
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white text-base font-black text-slate-950">
-                KS
+              <span className="relative h-14 w-14 overflow-hidden rounded-full border border-white/15 bg-white shadow-lg">
+                <Image src="/images/ks-logo.png" alt="" fill sizes="56px" className="object-contain p-1" />
               </span>
 
               <span>
@@ -118,7 +135,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open GitHub profile"
-                className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+                className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition duration-300 hover:-translate-y-1 hover:scale-105 hover:border-blue-400/30 hover:text-blue-300"
               >
                 <FaGithub size={20} />
               </a>
@@ -128,7 +145,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open LinkedIn profile"
-                className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+                className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition duration-300 hover:-translate-y-1 hover:scale-105 hover:border-blue-400/30 hover:text-blue-300"
               >
                 <FaLinkedinIn size={19} />
               </a>
@@ -138,7 +155,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open WhatsApp"
-                className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-1 hover:border-emerald-400/30 hover:text-emerald-300"
+                className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition duration-300 hover:-translate-y-1 hover:scale-105 hover:border-emerald-400/30 hover:text-emerald-300"
               >
                 <FaWhatsapp size={21} />
               </a>
@@ -146,14 +163,19 @@ export function Footer() {
               <a
                 href={`mailto:${profile.email}`}
                 aria-label="Send email"
-                className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+                className="interactive-icon-link grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-300 transition duration-300 hover:-translate-y-1 hover:scale-105 hover:border-blue-400/30 hover:text-blue-300"
               >
                 <Mail size={20} />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.45, delay: 0.08 }}
+          >
             <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">
               Quick links
             </p>
@@ -163,15 +185,20 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="w-fit text-sm font-semibold text-slate-300 transition hover:translate-x-1 hover:text-blue-300"
+                  className="group/footer-link relative w-fit text-sm font-semibold text-slate-300 transition duration-300 hover:translate-x-1 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:duration-300 hover:after:scale-x-100"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.45, delay: 0.16 }}
+          >
             <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">
               Contact
             </p>
@@ -179,7 +206,7 @@ export function Footer() {
             <div className="mt-6 space-y-5">
               <a
                 href={`mailto:${profile.email}`}
-                className="flex items-start gap-3 text-sm text-slate-300 transition hover:text-blue-300"
+                className="interactive-contact-link group flex items-start gap-3 text-sm text-slate-300"
               >
                 <Mail
                   size={18}
@@ -201,10 +228,15 @@ export function Footer() {
               </div>
 
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
           <div>
             <p className="text-sm font-semibold text-slate-300">
               © {currentYear} Kwabena Owusu Soadwa
@@ -214,7 +246,7 @@ export function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-slate-300 transition hover:-translate-y-1 hover:border-blue-400/30 hover:text-blue-300"
+            className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-slate-300 transition duration-300 hover:-translate-y-1 hover:scale-105 hover:border-blue-400/30 hover:text-blue-300"
             aria-label="Scroll back to the top"
           >
             Back to top
@@ -224,7 +256,7 @@ export function Footer() {
               className="transition group-hover:-translate-y-1"
             />
           </button>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
