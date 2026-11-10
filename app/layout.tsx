@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { profile } from "@/data/site";
 import { SITE_URL } from "@/lib/site-url";
@@ -75,7 +76,19 @@ const structuredData = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <Script id="google-tag-manager-init" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}
+        </Script>
+      </head>
       <body>
+        <Script
+          id="google-tag-manager"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-PSRTHPKN"
+          strategy="afterInteractive"
+        />
         <InitialLoader />
         <script
           dangerouslySetInnerHTML={{
