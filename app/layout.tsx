@@ -86,7 +86,7 @@ gtag('js', new Date());`}
       <body>
         <Script
           id="google-tag-manager"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-PSRTHPKN"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-MK6HPCLR"
           strategy="afterInteractive"
         />
         <InitialLoader />
