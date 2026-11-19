@@ -100,6 +100,10 @@ Configure the production domain, contact form credentials, and relevant environm
 
 Never commit private API keys or authentication credentials.
 
+## Documentation
+
+- [Original README and setup notes](docs/README-OPERATIONS-ARCHIVE.md)
+
 ## Developer
 
 **Kwabena Owusu Soadwa**
