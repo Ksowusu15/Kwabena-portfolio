@@ -1,82 +1,113 @@
-# Kwabena Owusu Soadwa — Production Portfolio
+# Kwabena Owusu Soadwa | Developer Portfolio
 
-A production-ready portfolio built with Next.js App Router, TypeScript, Tailwind CSS v4, Motion, Resend, and Vercel Analytics.
+### Software Engineer and Full-Stack Developer
 
-## Included
+My personal portfolio website showcases my software engineering experience, technical skills, and selected development projects.
 
-- Responsive light/dark portfolio
-- Animated hero with profile image
-- About, skills, experience, projects, contact, and premium footer
-- Static project case-study pages
-- Online resume plus PDF download
-- Resend contact form with validation, honeypot spam protection, and basic rate limiting
-- Dynamic Open Graph image and favicon
-- Sitemap, robots.txt, canonical metadata, Twitter/Open Graph cards, and JSON-LD
-- Loading, 404, and global error screens
+The website presents practical work across frontend development, backend engineering, database-driven applications, and business software.
+
+**Live Portfolio:** [www.kwabenaowususoadwa.com](https://www.kwabenaowususoadwa.com)
+
+## About the Project
+
+I built this portfolio to provide a central place where recruiters, employers, clients, and collaborators can explore my work and understand my technical background.
+
+The website includes project case studies, professional information, a résumé, and a contact interface.
+
+## Features
+
+### Portfolio Experience
+- Responsive layouts for desktop and mobile
+- Light and dark themes
+- Animated homepage and navigation
+- Skills, experience, and project sections
+- Individual project case studies
+- Online résumé and PDF download
+
+### Contact and Communication
+- Contact form with Resend integration
+- Form validation
+- Spam protection and rate limiting
+- Submission feedback
+
+### Performance and SEO
+- Metadata and social preview images
+- Sitemap and robots configuration
+- Structured data
+- Loading and error states
 - Vercel Analytics
 - Security response headers
 
+## Technology Stack
 
-## Featured Projects
+| Component | Technology |
+|---|---|
+| Framework | Next.js |
+| Frontend | React, TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Motion |
+| Email | Resend |
+| Analytics | Vercel Analytics |
+| Hosting | Vercel |
 
-- **CNK Establishment** — Full-stack business platform with a public product catalogue, quote and price-request workflows, role-based administration, analytics, resources, Prisma, PostgreSQL/Neon, media integration, and transactional email support.
-- **Soadwa Motors** — Full-stack dealership platform with inventory management, advanced filtering, image handling, enquiries, test-drive requests, and a secure admin dashboard.
-- **CropGuard AI** — AI-assisted crop disease decision-support application with image classification, prediction history, user accounts, feedback workflows, and administrator tools.
-- **E-Millenial Store** — Responsive e-commerce experience with cart management, validation, purchase summaries, and Paystack checkout integration.
-- **Student Management Portal** — Flask and MySQL application for student registration, search, record management, and dashboard reporting.
+## Selected Projects
 
-## Local setup
+### CNK Establishment
+A full-stack business platform with product management, customer enquiries, and role-based administration.
 
-1. Install Node.js 20.9 or newer.
-2. Run `npm install`.
-3. Copy `.env.example` to `.env.local`.
-4. Fill in the environment variables.
-5. Run `npm run dev`.
-6. Open `http://localhost:3000`.
+### Soadwa Motors
+A vehicle dealership application with inventory management, customer enquiries, and administrative functionality.
 
-## Required production environment variables
+### CropGuard AI
+A crop disease decision-support application with image-based analysis and user management.
 
-```env
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-RESEND_API_KEY=re_your_api_key
-CONTACT_TO_EMAIL=kwabena6037@gmail.com
-CONTACT_FROM_EMAIL=Kwabena Portfolio <portfolio@your-domain.com>
+### E-Millenial Store
+A responsive e-commerce frontend with product browsing, cart management, and Paystack integration.
+
+### Student Management Portal
+A Flask and MySQL application for managing student records and administrative workflows.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-`CONTACT_FROM_EMAIL` should use a sender address verified in Resend. During initial testing, Resend's onboarding sender may be used subject to Resend account restrictions.
+Copy `.env.example` to `.env.local` and configure the required environment variables.
 
-## Validate before deployment
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Verification
 
 ```bash
 npm run lint
 npm run build
-npm run start
 ```
 
-## Deploy to Vercel
+## Deployment
 
-1. Push the project to GitHub.
-2. Import the repository into Vercel.
-3. Add the four environment variables under Project Settings → Environment Variables.
-4. Deploy.
-5. Set `NEXT_PUBLIC_SITE_URL` to the final Vercel or custom-domain URL and redeploy.
-6. Verify the sender domain in Resend and update `CONTACT_FROM_EMAIL`.
+The portfolio is designed for deployment on Vercel.
 
-## Content to review
+Configure the production domain, contact form credentials, and relevant environment variables before deployment.
 
-- Confirm every project repository and live-demo URL in `data/site.ts`.
-- Replace or update `public/Kwabena-Owusu-Soadwa-CV.pdf` when your resume changes.
-- Confirm certification wording and employment details before publishing.
+Never commit private API keys or authentication credentials.
 
-## Premium case studies
+## Developer
 
-Each project page now includes recruiter-focused product storytelling:
+**Kwabena Owusu Soadwa**
 
-- Browser and responsive device previews
-- Problem, solution, role, and product overview
-- System architecture flow
-- Responsibilities and outcomes
-- Features, engineering challenges, and planned improvements
-- Lessons learned and next-project navigation
+Full-Stack Software Engineer
 
-The loading route also includes a branded animated progress experience with reduced-motion support.
+**Portfolio:** [www.kwabenaowususoadwa.com](https://www.kwabenaowususoadwa.com)
+
+**GitHub:** [github.com/Ksowusu15](https://github.com/Ksowusu15)
+
+**Location:** Accra, Ghana
